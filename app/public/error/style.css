@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("/error/img/background.png") center no-repeat;
+    background-size: cover;
+}
+
+.contentMain{
+    font-family: sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;;
+}
+
+button{
+    padding: 1rem 4rem;
+    border-radius: 10rem;
+    background-color: rgba(92, 92, 92, 0.498);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: rgba(92, 92, 92);
+}
