@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/epic/styleInfos.css">
+    <link rel="icon" href="/epic/img/nasa-logo.svg">
+    <title>Image</title>
+</head>
+<body>
+    <div class="contentMain">
+        <header>
+            <div class="content contentHeader">
+                <a class="logo" href="/"><img src="/epic/img/nasa-logo.svg"></a>
+
+                <nav>
+                    <ul>
+                        <li><a href="/apod">APOD</a> <span class="text">Foto astronómica do dia!</span> </li>
+                        <li><a href="/mrp">MARS ROVER PHOTOS</a> <span class="text">Dados de imagem coletados pelos rovers Curiosity,<br> Opportunity e Spirit da NASA em Marte!</span> </li>
+                        <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322);"><a href="/">EPIC</a></li>
+                    </ul>
+                </nav>
+
+                <div class="links">
+                    <a class="link" href="https://linkedin.com/in/joão-paulo-medeiros-rocha-75445820b"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a class="link" href="https://github.com/rochajpp"><ion-icon name="logo-github"></ion-icon></a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="content contentHome">
+                <h1 style="font-size: 2rem;">Day <%= dateImg %></h1>
+                <div class="container">
+                    <% for(var i = 0; i < data.length; i++){ %>
+                        <% 
+                            let elements = data[i].date.split(" "); 
+                            let date = elements[0];
+                            date = date.split("-");
+                            let dateString = " ";
+                            
+                            dateString = dateString + date[0];
+                            dateString = dateString + date[1];
+                            dateString = dateString + date[2]
+                        
+                        %>
+                        <div class="image">
+                            <a href="https://epic.gsfc.nasa.gov/archive/natural/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
+                                <img style="width: 20rem" src="https://epic.gsfc.nasa.gov/archive/natural/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image%>.png">
+                            </a>
+                            <div class="infos">
+                            <h1><%= elements[1] %></h1>
+                            </div>
+                        </div>
+                    <%}%>
+                </div>
+                <a href="/epic"><button>Back</button></a>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

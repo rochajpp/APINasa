@@ -6,6 +6,8 @@
 
 body{
     font-family: sans-serif;
+    background: url("/home/img/background.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .contentMain{
@@ -96,16 +98,11 @@ nav ul li a{
    
   }
 
-  nav ul li:hover .text {
+nav ul li:hover .text {
     display: block;
     opacity: 1;
-  }
-
-
-section{
-    background: url("/home/img/background.jpg") center no-repeat;
-    background-size: cover;
 }
+
 
 .contentHome{
     height: 100vh;

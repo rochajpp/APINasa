@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/epic/style.css">
+    <link rel="icon" href="/epic/img/nasa-logo.svg">
+    <title>EPIC</title>
+</head>
+<body>
+    <div class="contentMain">
+        <header>
+            <div class="content contentHeader">
+                <a class="logo" href="/"><img src="/epic/img/nasa-logo.svg"></a>
+
+                <nav>
+                    <ul>
+                        <li><a href="/apod">APOD</a> <span class="text">Foto astronómica do dia!</span> </li>
+                        <li><a href="/mrp">MARS ROVER PHOTOS</a> <span class="text">Dados de imagem coletados pelos rovers Curiosity,<br> Opportunity e Spirit da NASA em Marte!</span> </li>
+                        <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322);"><a href="/">EPIC</a></li>
+                    </ul>
+                </nav>
+
+                <div class="links">
+                    <a class="link" href="https://linkedin.com/in/joão-paulo-medeiros-rocha-75445820b"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a class="link" href="https://github.com/rochajpp"><ion-icon name="logo-github"></ion-icon></a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="content contentHome">
+                <h1>Select a photo date:</h1>
+                <form action="infos" method="POST">
+                    <select name="date">
+                        <% for(var i = 0; i < info.length; i++){ %>
+                            <option value=<%= info[i].date %>><%= info[i].date %></option>
+                        <%}%>
+                    </select>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

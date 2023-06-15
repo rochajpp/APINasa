@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +6,13 @@
 
 body{
     font-family: sans-serif;
+    background: url("/home/img/background.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .contentMain{
     display: flex;
     flex-direction: column;
-    
 }
 
 .content{  
@@ -20,10 +21,12 @@ body{
     align-items: center;
 }
 
+
 header{
     position: fixed;
-    z-index: 1000;
+    z-index: 1000
 }
+
 
 .contentHeader{
     justify-content: space-around;
@@ -42,8 +45,8 @@ header{
 
 nav ul{
     display: flex;
-    align-items: center;
     gap: 4rem;
+    align-items: center;
 }
 
 nav ul li{
@@ -100,36 +103,46 @@ nav ul li a{
     opacity: 1;
   }
 
-.contentHome{
-    background: url("/apod/img/background.jpg") center no-repeat;
-    background-size: cover;
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     color: white;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    backdrop-filter: blur(8px);
-    padding: 8rem 2rem;
+    gap: 2rem;
+}
+
+.contentHome{
+    padding: 8rem 0;
+    flex-direction: column;
+    
+    gap: 2rem;
+    color: white;
+}
+
+
+button{
+    padding: 0.8rem 4rem;
+    border: 1px solid white;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.8s;
+    backdrop-filter: blur(10px);
+}
+
+button:hover{
+    background-color: rgba(67, 67, 67, 0.324);
+    border: 1px solid white;
 }
 
 .image{
-    border: 1px solid black;
-    padding: 15rem 14rem;
-    transition: 1s;
-}
-
-.image:hover{
-    transform: scale(1.1)
-}
-
-p{
-    line-height: 2rem;
-}
-
-.infos h1{
-    font-size: 3rem;
-}
-
-.infos h2{
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 2rem;
 }
