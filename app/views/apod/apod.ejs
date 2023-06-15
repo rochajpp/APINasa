@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/apod/style.css">
+    <link rel="icon" href="/apod/img/nasa-logo.svg">
+    <title>AppNasa - APOD</title>
+</head>
+    <body> 
+        <div class="contentMain">
+            <header>
+                <div class="content contentHeader">
+                    <a class="logo" href="/"><img src="/apod/img/nasa-logo.svg"></a>
+
+                    <nav>
+                        <ul>
+                            <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322);"><a href="/">APOD</a></li>
+                            <li><a href="">MARS ROVER PHOTOS</a> <span class="text">Dados de imagem coletados pelos rovers Curiosity,<br> Opportunity e Spirit da NASA em Marte!</span> </li>
+                            <li><a href="">EPIC</a> <span class="text">Câmera de imagem policromática da Terra!</span> </li>
+                        </ul>
+                    </nav>
+
+                    <div class="links">
+                        <a class="link" href="https://linkedin.com/in/joão-paulo-medeiros-rocha-75445820b"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a class="link" href="https://github.com/rochajpp"><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <div class="contentHome">
+                    <a href="<%= files.url %>" class="image" data-value="<%= files.url %>"></a>
+                    <div class="infos">            
+                        <h1><%= files.title %></h1>
+                        <h2><%= files.date %></h2>
+                        <br>
+                        <p><%= files.explanation %></p>
+                        <br>
+                        <p style="font-weight: bold; font-size: 1.4rem;">@Copyright <%= files.copyright %></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="/apod/script.js"></script>
+    </body>
+</html>
