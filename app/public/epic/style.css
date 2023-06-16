@@ -117,7 +117,9 @@ section{
     gap: 2rem;
 }
 
-select{
+
+
+select, input{
     background-color: rgba(0, 0, 0, 0.603);
     border: 1px solid white;
     color: white;

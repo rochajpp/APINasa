@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/epic/style.css">
+    <link rel="stylesheet" type="text/css" href="/media.css">
     <link rel="icon" href="/epic/img/nasa-logo.svg">
     <title>EPIC</title>
 </head>
@@ -32,6 +33,12 @@
             <div class="content contentHome">
                 <h1>Select a photo date:</h1>
                 <form action="infos" method="POST">
+                    <label>Select the image type</label>
+                    <select name="type">
+                        <option value="natural">Natural</option>
+                        <option value="enhanced">Enhanced</option>
+                    </select>
+                    
                     <select name="date">
                         <% for(var i = 0; i < info.length; i++){ %>
                             <option value=<%= info[i].date %>><%= info[i].date %></option>

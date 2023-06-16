@@ -1,0 +1,14 @@
+@media screen and (max-width: 652px){
+    header nav, .links {
+        display: none;
+    }
+
+    /*==================APOD MEDIA==================*/
+
+    .contentHome{
+        flex-direction: column;
+    }
+
+    /*==============================================*/
+    
+}

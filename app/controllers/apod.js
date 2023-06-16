@@ -11,7 +11,7 @@ module.exports.index = (app, req, res) => {
         res.render("apod/apod.ejs", {files: response.data});
     })
     .catch(error => {
-        console.log(error);
+        console.log(error.data);
         res.render("error/error", {info: error});
     });
 }

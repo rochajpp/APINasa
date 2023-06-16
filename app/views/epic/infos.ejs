@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/epic/styleInfos.css">
+    <link rel="stylesheet" type="text/css" href="/media.css">
     <link rel="icon" href="/epic/img/nasa-logo.svg">
     <title>EPIC - Image</title>
 </head>
@@ -45,8 +46,8 @@
                         
                         %>
                         <div class="image">
-                            <a href="https://epic.gsfc.nasa.gov/archive/natural/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
-                                <img style="width: 20rem" src="https://epic.gsfc.nasa.gov/archive/natural/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image%>.png">
+                            <a href="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
+                                <img style="width: 20rem" src="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image%>.png">
                             </a>
                             <div class="infos">
                             <h1><%= elements[1] %></h1>

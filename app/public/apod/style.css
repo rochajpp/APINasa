@@ -102,7 +102,6 @@ nav ul li a{
   }
 
 .contentHome{
-    
     text-align: center;
     color: white;
     display: flex;
@@ -125,4 +124,20 @@ p{
 
 .infos h2{
     font-size: 2rem;
+}
+
+@media screen and (max-width: 1075px){
+
+    /*==================APOD MEDIA==================*/
+
+    .contentHome{
+        flex-direction: column;
+    }
+
+    .image img{
+        width: 20rem;
+    }
+
+    /*==============================================*/
+    
 }
