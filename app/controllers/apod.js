@@ -15,6 +15,4 @@ module.exports.index = (app, req, res) => {
         console.log(error);
         res.render("error/error", {info: error});
     });
-
-
 }
