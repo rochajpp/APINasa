@@ -31,14 +31,15 @@
 
         <section>
             <div class="content contentHome">
-                <h1>Select a photo date:</h1>
+                
                 <form action="infos" method="POST">
-                    <label>Select the image type</label>
+                    <h1>Select the image type</h1>
                     <select name="type">
                         <option value="natural">Natural</option>
                         <option value="enhanced">Enhanced</option>
                     </select>
                     
+                    <h1>Select a photo date:</h1>
                     <select name="date">
                         <% for(var i = 0; i < info.length; i++){ %>
                             <option value=<%= info[i].date %>><%= info[i].date %></option>

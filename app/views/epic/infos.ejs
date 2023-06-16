@@ -32,29 +32,34 @@
         <section>
             <div class="content contentHome">
                 <h1 style="font-size: 2rem;">Day <%= dateImg %></h1>
-                <div class="container">
-                    <% for(var i = 0; i < data.length; i++){ %>
-                        <% 
-                            let elements = data[i].date.split(" "); 
-                            let date = elements[0];
-                            date = date.split("-");
-                            let dateString = " ";
-                            
-                            dateString = dateString + date[0];
-                            dateString = dateString + date[1];
-                            dateString = dateString + date[2]
+                <% if(data.length > 0){%>
+                    <div class="container">
                         
-                        %>
-                        <div class="image">
-                            <a href="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
-                                <img style="width: 20rem" src="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image%>.png">
-                            </a>
-                            <div class="infos">
-                            <h1><%= elements[1] %></h1>
+                        <% for(var i = 0; i < data.length; i++){ %>
+                            <% 
+                                let elements = data[i].date.split(" "); 
+                                let date = elements[0];
+                                date = date.split("-");
+                                let dateString = " ";
+                                
+                                dateString = dateString + date[0];
+                                dateString = dateString + date[1];
+                                dateString = dateString + date[2]
+                            
+                            %>
+                            <div class="image">
+                                <a href="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
+                                    <img style="width: 20rem" src="https://epic.gsfc.nasa.gov/archive/<%= type %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image%>.png">
+                                </a>
+                                <div class="infos">
+                                <h1><%= elements[1] %></h1>
+                                </div>
                             </div>
-                        </div>
-                    <%}%>
-                </div>
+                        <%}%>
+                    </div>
+                <%} else{%>
+                    <h1>There are no <%= type %> images of the day <%= dateImg %></h1>
+                <%}%>
                 <a href="/epic"><button>Back</button></a>
             </div>
         </section>

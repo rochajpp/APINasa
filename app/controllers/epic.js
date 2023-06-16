@@ -15,7 +15,6 @@ module.exports.index = (app, req, res) => {
 
 module.exports.infos = (app, req, res) => {
     const data = req.body;
-    console.log(data);
     const axios = require('axios');
 
     const api_key = "kTUPqeT0gfqVM08scuGqthHLQyAaLqOjioMagEHq";
@@ -23,6 +22,7 @@ module.exports.infos = (app, req, res) => {
     axios.get("https://epic.gsfc.nasa.gov/api/" + data.type + "/date/" + data.date)
         .then(response => {
             res.render("epic/infos", {data: response.data, dateImg: data.date, type: data.type});
+            
         })
         .catch(error => {
             res.render("error/error", {info: error});
