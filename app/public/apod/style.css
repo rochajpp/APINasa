@@ -6,6 +6,8 @@
 
 body{
     font-family: sans-serif;
+    background: url("/apod/img/background.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .contentMain{
@@ -33,7 +35,6 @@ header{
     padding: 0.5rem;
     font-weight: bold;
     border-bottom: 1px solid white;
-    backdrop-filter: blur(4px);
 }
 
 .logo img{
@@ -92,7 +93,6 @@ nav ul li a{
     padding: 4rem;
     position: absolute;
     top: 3.8rem;
-   
   }
 
   nav ul li:hover .text {
@@ -101,26 +101,19 @@ nav ul li a{
   }
 
 .contentHome{
-    background: url("/apod/img/background.jpg") center no-repeat;
-    background-size: cover;
+    
     text-align: center;
     color: white;
     display: flex;
     align-items: center;
     gap: 4rem;
-    backdrop-filter: blur(8px);
-    padding: 8rem 2rem;
+    padding: 10rem 4rem;
 }
 
-.image{
-    border: 1px solid black;
-    padding: 15rem 14rem;
-    transition: 1s;
+.image img{
+    width: 40rem;
 }
 
-.image:hover{
-    transform: scale(1.1)
-}
 
 p{
     line-height: 2rem;

@@ -8,7 +8,7 @@ module.exports.index = (app, req, res) => {
 
     axios.get("https://api.nasa.gov/planetary/apod?api_key=" + api_key)
     .then(response => {
-        console.log(response);
+        console.log(response.data)
         res.render("apod/apod.ejs", {files: response.data});
     })
     .catch(error => {

@@ -15,7 +15,7 @@
 
                     <nav>
                         <ul>
-                            <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322);"><a href="/">APOD</a></li>
+                            <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322); border-radius: 1rem;"><a href="/">APOD</a></li>
                             <li><a href="">MARS ROVER PHOTOS</a> <span class="text">Dados de imagem coletados pelos rovers Curiosity,<br> Opportunity e Spirit da NASA em Marte!</span> </li>
                             <li><a href="/epic">EPIC</a> <span class="text">Câmera de imagem policromática da Terra!</span> </li>
                         </ul>
@@ -30,7 +30,7 @@
 
             <section>
                 <div class="contentHome">
-                    <a href="<%= files.url %>" class="image" data-value="<%= files.url %>"></a>
+                    <a href="<%= files.url %>" class="image"><img src="<%= files.url %>"></a>
                     <div class="infos">            
                         <h1><%= files.title %></h1>
                         <h2><%= files.date %></h2>
