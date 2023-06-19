@@ -31,7 +31,14 @@
 
             <section>
                 <div class="contentHome">
-                    <a href="<%= files.url %>" class="image"><img src="<%= files.url %>"></a>
+                    <a href="<%= files.url %>" class="image">
+                        <% if(files.media_type == "image"){ %>
+                            <img src="<%= files.url %>">
+                        <%} else{%>
+                            <iframe src="<%= files.url %>"></iframe>
+                        <%}%>
+
+                    </a>
                     <div class="infos">            
                         <h1><%= files.title %></h1>
                         <h2><%= files.date %></h2>
