@@ -136,12 +136,21 @@ button:hover{
     background-color: rgba(67, 67, 67, 0.324);
     border: 1px solid white;
 }
-
+.infos{
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
 .image{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    gap: 2rem;
+}
+
+.positions{
+    display: flex;
+    gap: 1rem;
 }
