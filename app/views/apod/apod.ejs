@@ -45,7 +45,9 @@
                         <br>
                         <p><%= files.explanation %></p>
                         <br>
-                        <p style="font-weight: bold; font-size: 1.4rem;">@Copyright <%= files.copyright %></p>
+                        <% if(files.copyright != undefined){ %>
+                                <p style="font-weight: bold; font-size: 1.4rem;">@Copyright <%= files.copyright %></p>
+                        <%}%>
                     </div>
                 </div>
             </section>
