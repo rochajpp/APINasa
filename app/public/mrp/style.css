@@ -6,7 +6,7 @@
 
 body{
     font-family: sans-serif;
-    background: url("/home/img/background.jpg") center no-repeat;
+    background: url("/mrp/img/background.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -110,7 +110,7 @@ nav ul li:hover .text {
     flex-direction: column;
     text-align: center;
     color: white;
-    gap: 2rem;
+    padding: 8rem 2rem 0;
 }
 
 .contentHome h1{
@@ -135,4 +135,26 @@ button{
 button:hover{
     background-color: rgba(67, 67, 67, 0.324);
     border: 1px solid white;
+}
+
+#map{
+    height: 50rem;
+    width: 100vw;
+}
+
+.infoPosition{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+    width: 100vw;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.infoPosition strong{
+    font-size: 1.2rem;
 }

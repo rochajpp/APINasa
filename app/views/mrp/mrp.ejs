@@ -16,7 +16,7 @@
                 <nav>
                     <ul>
                         <li><a href="/apod">APOD</a> <span class="text">Astronomical photo of the Day!</span> </li>
-                        <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322); border-radius: 1rem;"><a href="/mrp">MARS ROVER PHOTOS</a> </li>
+                        <li style="padding: 0.5rem 1rem; background-color: rgba(255, 255, 255, 0.322); border-radius: 1rem;"><a href="/mrp">ACTUAL LOCATION OF THE ISS</a> </li>
                         <li><a href="/epic">EPIC</a> <span class="text">Earth's polychromatic camera!</span> </li>
                     </ul>
                 </nav>
@@ -30,7 +30,13 @@
 
         <section>
             <div class="content contentHome">
-                
+                <h1>This page will refresh every 10 seconds!</h1>
+                <div class="infoPosition">
+                    <strong>Latitude:</strong> <p id="lat"><%= coord.latitude %></p>
+                    <strong>Longitude:</strong><p id="long"><%= coord.longitude %></p>
+                </div>
+
+                <div id="map"></div>
             </div>
         </section>
     </div>
@@ -39,5 +45,6 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="/mrp/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa5q-jmH3lTRSa9rsXWzDGGhWnM9JQjeY&callback=initMap"></script>
 </body>
 </html>
