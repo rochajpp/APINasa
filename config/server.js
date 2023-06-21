@@ -9,7 +9,7 @@ app.set("views", "./app/views");
 app.set("view engine", "ejs");
 
 app.use(express.static("./app/public"));
-app.use(bodyParser.urlencoded({extend: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 consign()

@@ -15,13 +15,17 @@ function initMap() {
         zoom: 2
     });
   
+    var icon = {
+        url: '/mrp/img/issIcon.png'
+    };
+
     // Adiciona um marcador no mapa
     var marker = new google.maps.Marker({
         position: { lat: latitude, lng: longitude },
-        map: map
+        icon: icon
     });
 }
 
-setInterval(() => {
+function refresh(){
     location.reload();
-}, 10000);
+}

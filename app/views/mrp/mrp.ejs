@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/mrp/style.css">
     <link rel="icon" href="/mrp/img/nasa-logo.svg">
-    <title>Mars Rover Photoss</title>
+    <title>Actual Location Of The ISS</title>
 </head>
 <body>
     <div class="contentMain">
@@ -30,7 +30,7 @@
 
         <section>
             <div class="content contentHome">
-                <h1>This page will refresh every 10 seconds!</h1>
+                <button onclick="refresh()">Click To Update Location</button>
                 <div class="infoPosition">
                     <strong>Latitude:</strong> <p id="lat"><%= coord.latitude %></p>
                     <strong>Longitude:</strong><p id="long"><%= coord.longitude %></p>

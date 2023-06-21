@@ -121,9 +121,9 @@ nav ul li:hover .text {
 }
 
 button{
-    padding: 0.8rem 4rem;
+    padding: 0.8rem 2rem;
     border: 1px solid white;
-    border-radius: 10rem;
+    border-radius: 0.4rem;
     font-size: 1.4rem;
     color: white;
     background-color: rgba(255, 255, 255, 0);
@@ -133,7 +133,7 @@ button{
 }
 
 button:hover{
-    background-color: rgba(67, 67, 67, 0.324);
+    background-color: rgba(67, 67, 67, 0.649);
     border: 1px solid white;
 }
 
@@ -158,3 +158,4 @@ button:hover{
 .infoPosition strong{
     font-size: 1.2rem;
 }
+
