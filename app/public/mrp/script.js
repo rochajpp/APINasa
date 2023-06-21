@@ -22,6 +22,7 @@ function initMap() {
     // Adiciona um marcador no mapa
     var marker = new google.maps.Marker({
         position: { lat: latitude, lng: longitude },
+        map: map,
         icon: icon
     });
 }
