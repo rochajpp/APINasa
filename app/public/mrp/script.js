@@ -1,16 +1,18 @@
-const long = parseFloat(document.querySelector('#long').innerHTML);
-const lat = parseFloat(document.querySelector('#lat').innerHTML);
+let long = parseFloat(document.querySelector('#long').innerHTML);
+let lat = parseFloat(document.querySelector('#lat').innerHTML);
 
 console.log(long);
 console.log(lat);
 
 // Função para inicializar o mapa
-function initMap() {
+async function initMap() {
+    
+
     var latitude = lat; // Latitude desejada
     var longitude = long; // Longitude desejada
-  
-    // Cria um objeto de mapa
-    var map = new google.maps.Map(document.getElementById('map'), {
+
+     // Cria um objeto de mapa
+     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: latitude, lng: longitude },
         zoom: 2
     });
@@ -25,8 +27,28 @@ function initMap() {
         map: map,
         icon: icon
     });
-}
 
-function refresh(){
-    location.reload();
+    setInterval(async () => {
+        var position;
+        await fetch("http://api.open-notify.org/iss-now.json")
+        .then((response) => {
+            return response.json();
+        }) 
+        .then((data) => {
+            position = data.iss_position;
+        });
+
+        document.querySelector('#long').innerHTML = position.latitude;
+        document.querySelector('#lat').innerHTML =  position.longitude;
+
+        latitude = position.latitude;
+        longitude = position.longitude;
+
+        marker.setPosition({
+            lat: parseFloat(latitude),
+            lng: parseFloat(longitude)
+        });
+
+    }, 1000);
+   
 }

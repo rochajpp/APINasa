@@ -120,18 +120,13 @@ nav ul li:hover .text {
     font-size: 2rem;
 }
 
-button{
-    padding: 0.8rem 2rem;
-    border: 1px solid white;
-    border-radius: 0.4rem;
-    font-size: 1.4rem;
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-    cursor: pointer;
-    transition: 0.8s;
-    backdrop-filter: blur(10px);
-}
 
+
+button:hover{
+    background-color: rgba(67, 67, 67, 0.649);
+    border: 1px solid white;
+}
+    
 button:hover{
     background-color: rgba(67, 67, 67, 0.649);
     border: 1px solid white;
@@ -147,9 +142,7 @@ button:hover{
     gap: 1rem;
     align-items: center;
     backdrop-filter: blur(10px);
-    border-top: 1px solid white;
     border-bottom: 1px solid white;
-
     width: 100vw;
     justify-content: center;
     padding: 1rem 0;
